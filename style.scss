@@ -1,0 +1,110 @@
+body{
+    background: black;
+    padding: 50px;
+}
+
+
+.circle{
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    margin-top: 200px;
+    border-radius: 50%;
+    position: relative;
+    background-image: url(images/eye.png);
+    background-size: cover;
+}
+
+.circle:before{
+    content:'';
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: rgb(252, 174, 57);
+    bottom: 0px;
+    position: absolute;
+    transition: 1s;
+}
+
+.circle:hover:before{
+    transform: rotateX(90deg);
+    bottom: 50%;
+}
+
+
+.box{
+    width: 350px;
+    height: 650px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 200px;
+    background: black;
+    background-image: url(images/ironman.png);
+    background-size: 0 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    transition: 1s;
+}
+
+.box:hover{
+    background-size: 100% 100%;
+}
+
+.box p{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    color: transparent;
+    transition: 1s;
+}
+
+.box:hover p{
+    margin-top: 500px;
+    color: white;
+    font-size: 40px;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+
+.box:before{
+    content: '';
+    width: 175px;
+    height: 650px;
+    border: 1px solid black;
+    margin: auto;
+    display: block;
+    background: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+}
+
+.box:hover:before{
+    transform: rotateY(90deg) ;
+    left: -85.5px;
+}
+
+.box:after{
+    content: '';
+    width: 175px;
+    height: 650px;
+    border: 1px solid black;
+    margin: auto;
+    display: block;
+    background: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 1s;
+}
+
+.box:hover:after{
+    transform: rotateY(90deg) ;
+    right: -85.5px;
+}
